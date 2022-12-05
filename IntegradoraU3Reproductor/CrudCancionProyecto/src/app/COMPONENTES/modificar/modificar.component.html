@@ -1,0 +1,58 @@
+<div class="container">
+    <p>Modificar canción</p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre de la canción</label>
+                    <!--<input [(ngModel)]="cancion.nombre_cancion" type="text" class="form-control" name="nombre">-->
+                    <input type="text" class="form-control" [(ngModel)]="cancion.nombre_cancion" name="nombre_cancion">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Genero</label>
+                    <!--<input [(ngModel)]="cancion.genero" type="text" class="form-control" name="genero">-->
+                    <input type="text" class="form-control" [(ngModel)]="cancion.genero" name="genero">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Artista</label>
+                    <!--<input [(ngModel)]="cancion.artista" type="text" class="form-control" name="artista">-->
+                    <input type="text" class="form-control" [(ngModel)]="cancion.artista" name="artista">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Caratula</label>
+                    <!--<input [(ngModel)]="cancion.caratula" type="text" class="form-control" name="caratula">-->
+                    <input type="text" class="form-control" [(ngModel)]="cancion.caratula" name="caratula">
+                </div>
+                
+                <button (click)="modificar()" class="btn btn-primary">Modificar</button>
+            </form>
+        </div>
+
+
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <img src="{{cancion.caratula}}" width="100" height="100" alt="">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">{{cancion.nombre_cancion}}</label>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">{{cancion.genero}}</label>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">{{cancion.artista}}</label>
+                </div>
+                
+            </form>
+        </div>
+
+    </div>
+    
+</div>
