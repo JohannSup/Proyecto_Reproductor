@@ -1,0 +1,19 @@
+create database if not exists CrudCancion;
+use CrudCancion;
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+flush privileges;
+
+create table cancion(
+id_cancion int not null auto_increment primary key,
+nombre_cancion varchar(45),
+genero varchar(30),
+artista varchar(30),
+caratula varchar(200)
+);
+
+insert into cancion (nombre_cancion, genero, artista, caratula) values ('TRAP SENSUAL', 'Trap', 'Loke','caratula1.jpeg');
+insert into cancion (nombre_cancion, genero, artista, caratula) values ('Titi me preguntó', 'Reggaeton', 'Bad Bunny','caratula2.jpeg');
+select * from cancion;
+
+drop table if exists cancion;
